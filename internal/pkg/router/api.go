@@ -20,7 +20,7 @@ type MyReq struct {
 	Tid            int      // 接口追踪ID，取自请求参数或自动根据时间戳生成
 }
 
-type MyApiFunc func(*MyReq)
+type MyApiFunc func(*ghttp.Request)
 
 type ApiConfig struct {
 	Url              string // 在同一个api下不允许重复

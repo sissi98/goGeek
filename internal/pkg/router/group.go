@@ -45,7 +45,7 @@ func CallApi(r *ghttp.Request, apiFunc MyApiFunc, paramModel interface{}) {
 	}
 	req.Params = p
 
-	apiFunc(req)
+	apiFunc(r)
 }
 func NewReq(gfr *ghttp.Request) *MyReq {
 	req := &MyReq{
