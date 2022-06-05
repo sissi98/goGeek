@@ -1,0 +1,20 @@
+
+# Database.
+# Database.
+[database]
+debug = true
+link = "mysql:public:123456@tcp(xxx.xxx.x.xxx:xxx)/sissi"
+timezone = "local"
+# Database logger.
+[database.logger]
+level = "all"
+path = "log/database"
+stdoutPrint = true
+
+[gfcli]
+    [[gfcli.gen.dao]]
+        link = "mysql:public:123456@tcp(xxx.xxx.x.xxx:xxx)/sissi"
+        group="default"
+        path="./internal/dao/sissi"
+        modelFile="sissi_model.go"
+        tables ="users"
